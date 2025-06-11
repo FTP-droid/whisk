@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Recipe Submission</title>
   </head>
   <body>
@@ -17,8 +17,7 @@
 
     <main>
       <h1>Submit Your Recipe</h1>
-      <form action="" method="POST" enctype="multipart/form-data">
-
+      <form>
         <label for="firstName">First Name:</label><br>
         <input type="text" id="firstName" name="firstName" placeholder="e.g., Jamie" required><br><br>
 
@@ -32,7 +31,7 @@
         <input type="radio" id="vegetarian" name="type" value="Vegetarian" required>
         <label for="vegetarian">Vegetarian</label><br>
         <input type="radio" id="nonVeg" name="type" value="Non-Vegetarian">
-        <label for="nonveg">Non-Vegetarian</label><br>
+        <label for="nonVeg">Non-Vegetarian</label><br>
         <input type="radio" id="vegan" name="type" value="Vegan">
         <label for="vegan">Vegan</label><br><br>
 
@@ -45,7 +44,7 @@
         </select><br><br>
 
         <label for="photo">Upload a Photo (optional):</label><br>
-        <input type="file" id="submitPhoto" name="photo" accept="image/*"><br><br>
+        <input type="file" id="photo" name="photo" accept="image/*"><br><br>
 
         <input type="submit" value="Submit Recipe">
 
