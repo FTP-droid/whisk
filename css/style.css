@@ -7,6 +7,7 @@
 :root {
     --font-main: 'Segoe UI', Arial, sans-serif;
 
+    /* COLORS */
     --color-primary: #A0C878;
     --color-accent: #DDEB9D;
     --color-bg: #FAF6E9;
@@ -20,11 +21,10 @@
 
 body {
     font-family: var(--font-main);
-    font-size: 18px;
+    font-size: 16px;
     background-color: var(--color-bg);
     color: var(--color-text);
     line-height: 1.6;
-    padding: 0 1rem;
 }
 
 header {
@@ -39,15 +39,16 @@ header {
 nav {
     background-color: var(--color-light);
     border-bottom: 2px solid var(--color-primary);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 nav ul {
-    display: flex;
-    justify-content: center;
     list-style: none;
     padding: 0.5rem 0;
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 nav a {
@@ -62,13 +63,7 @@ nav a:hover {
 }
 
 main {
-    max-width: 960px;
-    margin: 0 auto;
     padding-bottom: 2rem;
-}
-
-section {
-    margin-bottom: 2rem;
 }
 
 article {
@@ -168,13 +163,19 @@ textarea:invalid {
     margin-bottom: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     nav ul {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
     }
 
-    article {
-        font-size: 1rem;
+    main {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    body {
+        font-size: 18px;
     }
 }
