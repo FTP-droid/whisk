@@ -3,26 +3,57 @@
   <head>
     <meta charset="UTF-8">
     <title>Recipes Gallery</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="favourite.html">Favorites</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="recipes_gallery.html">Recipes</a></li>
-        <li><a href="recipe_form.html">Submit Recipes</a></li>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="favourite.html" class="nav-link">Favorites</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="recipes_gallery.html" class="nav-link">Recipes</a></li>
+        <li><a href="recipe_form.html" class="nav-link">Submit Recipes</a></li>
       </ul>
     </nav>
-    <h1>Recipes Gallery</h1>
-    <main>
-      <label>
+    <h1 id="recipes-gallery-h1">Recipes Gallery</h1>
+    <main id="recipes-gallery-main">
+      <label id="recipes-gallery-search-label">
         Search for a recipe!
         <input type="search" name="search">
       </label>
-      <article>
-        <h2><a href="recipes/spaghetti_carbonara.html">Spaghetti Carbonara</a></h2>
+      <article class="recipes-gallery-card">
+        <h2>Spaghetti Carbonara</h2>
+        <img
+          src="images/carbonara.jpg"
+          alt="Spaghetti Carbonara"
+          width="300"
+          height="300"
+        >
+        <address>By Quinn Nguyen</address>
+      </article>
+      <article class="recipes-gallery-card">
+        <h2>Spaghetti Carbonara</h2>
+        <img
+          src="images/carbonara.jpg"
+          alt="Spaghetti Carbonara"
+          width="300"
+          height="300"
+        >
+        <address>By Quinn Nguyen</address>
+      </article>
+      <article class="recipes-gallery-card">
+        <h2>Spaghetti Carbonara</h2>
+        <img
+          src="images/carbonara.jpg"
+          alt="Spaghetti Carbonara"
+          width="300"
+          height="300"
+        >
+        <address>By Quinn Nguyen</address>
+      </article>
+      <article class="recipes-gallery-card">
+        <h2>Spaghetti Carbonara</h2>
         <img
           src="images/carbonara.jpg"
           alt="Spaghetti Carbonara"
