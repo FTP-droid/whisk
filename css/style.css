@@ -1,0 +1,320 @@
+/* =================================== */
+/* RESET + VARIABLES                   */
+/* =================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-main: 'Montserrat', sans-serif;
+
+    --color-primary: #143D60;
+    --color-accent: #DDEB9D;
+    --color-bg: #FAF6E9;
+    --color-light: #FFFDF6;
+    --color-text: #333;
+    --color-danger: #D32F2F;
+
+    --radius: 8px;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =================================== */
+/* BASE TYPOGRAPHY + GLOBAL ELEMENTS  */
+/* =================================== */
+
+body {
+    font-family: var(--font-main);
+    font-size: 16px;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+h1 {
+    font-family: 'Old Standard TT', serif;
+    padding-bottom: 20px;
+    border-bottom: dashed;
+}
+
+main {
+    padding: 10px;
+}
+
+
+/* =================================== */
+/* HEADER + FOOTER                     */
+/* =================================== */
+
+header {
+    background-color: var(--color-primary);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow);
+}
+
+footer {
+    background-color: var(--color-primary);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+
+/* =================================== */
+/* NAVIGATION                          */
+/* =================================== */
+
+nav {
+    background-color: var(--color-light);
+    border-bottom: 2px solid var(--color-primary);
+    margin-bottom: 1.5rem;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    border-bottom: 2px solid var(--color-primary);
+    position: relative;
+}
+
+.nav-logo {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #143D60;
+    font-family: 'Dancing Script', cursive;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #27667B;
+    display: block;
+}
+
+.nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: var(--shadow);
+    padding: 1rem;
+    gap: 1rem;
+}
+
+#menu-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Old Standard TT', serif;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--color-accent);
+}
+
+
+/* =================================== */
+/* FORMS + INPUTS                      */
+/* =================================== */
+
+form {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-error {
+    color: var(--color-danger);
+    font-size: 0.875rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.radio-group-label {
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5em;
+  gap: 2px;
+}
+
+.radio-option label {
+  margin: 0;
+  font-weight: normal;
+  white-space: normal;
+  width: 500px;
+}
+
+/* =================================== */
+/* CONTENT STYLES                      */
+/* =================================== */
+
+article {
+    background: var(--color-light);
+    border-radius: var(--radius);
+    padding: 1rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1rem;
+    transition: transform 0.2s ease;
+}
+
+article:hover {
+    transform: translateY(-3px);
+}
+
+article h3 a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+article h3 a:hover {
+    text-decoration: underline;
+}
+
+aside {
+    background: var(--color-accent);
+    padding: 1rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin: 2rem 0;
+}
+
+
+/* =================================== */
+/* UTILITIES + COMPONENTS              */
+/* =================================== */
+
+.btn {
+    display: inline-block;
+    padding: 0.75em 1.25em;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #86af5f;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: var(--radius);
+    background: var(--color-light);
+    box-shadow: var(--shadow);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+/* =================================== */
+/* MEDIA QUERIES (DESKTOP STYLES)     */
+/* =================================== */
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 2rem;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    #recipes-gallery-main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .recipes-gallery-card {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1280px) {
+    #recipes-gallery-main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
