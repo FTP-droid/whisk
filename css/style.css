@@ -355,30 +355,6 @@ footer {
   margin-top: 0.5rem;
 }
 
-
-/* =================================== */
-/* MEDIA QUERIES (DESKTOP STYLES)     */
-/* =================================== */
-
-@media (min-width: 768px) {
-    .hamburger {
-        display: none;
-    }
-
-    .nav-links {
-        display: flex !important;
-        position: static;
-        flex-direction: row;
-        justify-content: flex-end;
-        gap: 2rem;
-        box-shadow: none;
-        padding: 0;
-    }
-
-.hidden {
-    display: none;
-}
-
 input,
 textarea,
 select {
@@ -457,7 +433,29 @@ select {
     z-index: 2;
 }
 
+/* =================================== */
+/* MEDIA QUERIES (DESKTOP STYLES)     */
+/* =================================== */
+
 @media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 2rem;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .hidden {
+        display: none;
+    }
+
     nav ul {
         flex-direction: row;
         justify-content: center;
@@ -486,5 +484,4 @@ select {
     #recipes-gallery-main {
         grid-template-columns: repeat(3, 1fr);
     }
-}
 }
