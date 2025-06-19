@@ -22,7 +22,6 @@
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-
 /* =================================== */
 /* BASE TYPOGRAPHY + GLOBAL ELEMENTS  */
 /* =================================== */
@@ -43,30 +42,21 @@ h1 {
 
 main {
     padding: 10px;
+    padding-bottom: 2rem;
 }
-
 
 /* =================================== */
 /* HEADER + FOOTER                     */
 /* =================================== */
 
-header {
-    background-color: var(--color-primary);
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    margin-bottom: 1rem;
-    box-shadow: var(--shadow);
-}
-
-footer {
+header, footer {
     background-color: var(--color-primary);
     color: white;
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
+    box-shadow: var(--shadow);
 }
-
 
 /* =================================== */
 /* NAVIGATION                          */
@@ -140,7 +130,6 @@ nav a:hover {
     color: var(--color-accent);
 }
 
-
 /* =================================== */
 /* FORMS + INPUTS                      */
 /* =================================== */
@@ -155,16 +144,17 @@ form {
 }
 
 .form-group {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 input,
 textarea,
 select {
     width: 100%;
-    padding: 5px;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
     border: 1px solid #ccc;
     border-radius: var(--radius);
     font-size: 1rem;
@@ -179,6 +169,12 @@ textarea::placeholder {
     font-family: 'Montserrat', sans-serif;
 }
 
+input:invalid,
+textarea:invalid {
+    border-color: var(--color-danger);
+    background-color: #ffecec;
+}
+
 .form-error {
     color: var(--color-danger);
     font-size: 0.875rem;
@@ -187,27 +183,27 @@ textarea::placeholder {
 }
 
 legend {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 
 .radio-group-label {
-  margin-bottom: 0.5em;
-  font-weight: bold;
+    margin-bottom: 0.5em;
+    font-weight: bold;
 }
 
 .radio-option {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.5em;
-  gap: 2px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5em;
+    gap: 2px;
 }
 
 .radio-option label {
-  margin: 0;
-  font-weight: normal;
-  white-space: normal;
-  width: 500px;
+    margin: 0;
+    font-weight: normal;
+    white-space: normal;
+    width: 500px;
 }
 
 /* =================================== */
@@ -243,7 +239,6 @@ aside {
     box-shadow: var(--shadow);
     margin: 2rem 0;
 }
-
 
 /* =================================== */
 /* UTILITIES + COMPONENTS              */
@@ -283,8 +278,6 @@ aside {
     display: none;
 }
 
-
-
 /* =================================== */
 /* MEDIA QUERIES (DESKTOP STYLES)     */
 /* =================================== */
@@ -302,6 +295,15 @@ aside {
         gap: 2rem;
         box-shadow: none;
         padding: 0;
+    }
+
+    main {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    body {
+        font-size: 18px;
     }
 
     #recipes-gallery-main {
