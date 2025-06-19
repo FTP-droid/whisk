@@ -343,12 +343,6 @@ select {
     background-color: #fff;
 }
 
-input:invalid,
-textarea:invalid {
-    border-color: var(--color-danger);
-    background-color: #ffecec;
-}
-
 .form-error {
     color: var(--color-danger);
     font-size: 0.875rem;
