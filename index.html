@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Whisk</title>
   </head>
   <body>
     <nav class="top-nav">
-      <div class="nav-logo">whisk</div>
-      <input type="checkbox" id="menu-toggle">
+      <div class="nav-logo"><a href="index.html">whisk</a></div>
+      <input type="checkbox" id="menu-toggle" />
       <label for="menu-toggle" class="hamburger">&#9776;</label>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -24,27 +21,150 @@
 
     <main>
       <section>
-        <h2 class="text-center">Available Recipes</h2>
+        <h1>Trending Recipes</h1>
+        <div class="carousel">
+          <article class="card">
+            <figure>
+              <img src="../images/carbonara.jpg" alt="Spaghetti Carbonara" />
+            </figure>
+            <div class="card-body">
+              <h3 class="card-title">
+                <a href="recipes/spaghetti_carbonara.html" class="recipe-link">
+                  Spaghetti Carbonara
+                </a>
+              </h3>
+              <p>
+                A creamy, cheesy classic Italian pasta with pancetta and egg.
+              </p>
+              <div class="card-actions">
+                <a href="recipes/spaghetti_carbonara.html" class="btn"
+                  >View Recipe</a
+                >
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <figure>
+              <img src="../images/chia-pudding.jpg" alt="Spaghetti Carbonara" />
+            </figure>
+            <div class="card-body">
+              <h3 class="card-title">
+                <a href="recipes/chia_pudding.html" class="recipe-link">
+                  Chia Pudding with Almond Butter and Berries
+                </a>
+              </h3>
+              <p>
+                Creamy chia pudding topped with almond butter and fresh berries
+              </p>
+              <div class="card-actions">
+                <a href="recipes/spaghetti_carbonara.html" class="btn"
+                  >View Recipe</a
+                >
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <figure>
+              <img src="images\cauliflower.jpg" alt="Spaghetti Carbonara" />
+            </figure>
+            <div class="card-body">
+              <h3 class="card-title">
+                <a href="recipes/spaghetti_carbonara.html" class="recipe-link">
+                  Spicy Buffalo Cauliflower Bites
+                </a>
+              </h3>
+              <p>Crispy and spicy buffalo cauliflower bites.</p>
+              <div class="card-actions">
+                <a href="recipes/spaghetti_carbonara.html" class="btn"
+                  >View Recipe</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
 
-        <article class="card">
-          <h3>
-            <a href="recipes/spaghetti_carbonara.html" class="recipe-link"
-              >Spaghetti Carbonara</a
-            >
-          </h3>
-          <p>A creamy, cheesy classic Italian pasta with pancetta and egg.</p>
-        </article>
+        <h1>Browse by Cuisine</h1>
+        <div class="carousel">
+          <article
+            class="card-overlay"
+            style="background-image: url('../images/italian.jpg')"
+          >
+            <div class="card-text">
+              <h3>
+                <a href="recipes/spaghetti_carbonara.html" class="recipe-link">
+                  Italian
+                </a>
+              </h3>
+            </div>
+          </article>
+          <article
+            class="card-overlay"
+            style="background-image: url('../images/american.jpg')"
+          >
+            <div class="card-text">
+              <h3>
+                <a href="recipes\bunless_burger.html" class="recipe-link">
+                  American
+                </a>
+              </h3>
+            </div>
+          </article>
+        </div>
+
+        <h1>Browse by Diet</h1>
+        <div class="carousel">
+          <article
+            class="card-overlay"
+            style="background-image: url('../images/vegan.jpg')"
+          >
+            <div class="card-text">
+              <h3>
+                <a href="recipes\eggplant_caponata.html" class="recipe-link">
+                  Vegan
+                </a>
+              </h3>
+            </div>
+          </article>
+
+          <article
+            class="card-overlay"
+            style="background-image: url('../images/keto.jpg')"
+          >
+            <div class="card-text">
+              <h3>
+                <a href="recipes\zucchini_noodle.html" class="recipe-link">
+                  Keto
+                </a>
+              </h3>
+            </div>
+          </article>
+
+          <article
+            class="card-overlay"
+            style="background-image: url('../images/paleo.jpg')"
+          >
+            <div class="card-text">
+              <h3>
+                <a href="recipes\chia_pudding.html" class="recipe-link">
+                  Paleo
+                </a>
+              </h3>
+            </div>
+          </article>
+        </div>
       </section>
     </main>
 
     <aside class="card">
-      <h2>Recipe Tips</h2>
-      <p>Use fresh ingredients for the best flavor.</p>
-      <p>Always read the full recipe before starting.</p>
+      <div class="card-body">
+        <h2 class="card-title">Tips of The Day</h2>
+        <p>Use fresh ingredients for the best flavor.</p>
+        <p>Always read the full recipe before starting.</p>
+      </div>
     </aside>
 
     <footer>
-      <p class="text-center">&copy; 2025 Whisk. All rights reserved.</p>
+      <p>&copy; 2025 Whisk. All rights reserved.</p>
     </footer>
   </body>
 </html>
