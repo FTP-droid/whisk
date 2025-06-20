@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>My Favourite Recipes</title>
   </head>
   <body>
     <nav class="top-nav">
-      <div class="nav-logo">whisk</div>
-      <input type="checkbox" id="menu-toggle">
+      <div class="nav-logo"><a href="index.html">whisk</a></div>
+      <input type="checkbox" id="menu-toggle" />
       <label for="menu-toggle" class="hamburger">&#9776;</label>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -21,39 +18,40 @@
       </ul>
     </nav>
 
-<main>
-  <h1>My Favourite Recipes</h1>
-  <section class="favourites-container">
+    <main>
+      <h1>My Favourite Recipes</h1>
+      <section class="favourites-container">
+        <article class="favourite-card">
+          <h2>Spaghetti Carbonara</h2>
+          <div class="favourite-card-content">
+            <img src="images/carbonara.jpg" alt="Spaghetti Carbonara" />
+            <p>A creamy pasta dish with pancetta, eggs, and Parmesan cheese.</p>
+          </div>
+          <p class="submitter">Submitted by Jamie Oliver</p>
+        </article>
 
-    <article class="favourite-card">
-      <h2>Spaghetti Carbonara</h2>
-      <div class="favourite-card-content">
-        <img src="images/carbonara.jpg" alt="Spaghetti Carbonara">
-        <p>A creamy pasta dish with pancetta, eggs, and Parmesan cheese.</p>
-      </div>
-      <p class="submitter">Submitted by Jamie Oliver</p>
-    </article>
+        <article class="favourite-card">
+          <h2>Avocado Toast</h2>
+          <div class="favourite-card-content">
+            <img src="images/avocado_toast.jpg" alt="Avocado Toast" />
+            <p>
+              Toasted bread topped with smashed avocado, lemon, and chili
+              flakes.
+            </p>
+          </div>
+          <p class="submitter">Submitted by Alex Green</p>
+        </article>
 
-    <article class="favourite-card">
-      <h2>Avocado Toast</h2>
-      <div class="favourite-card-content">
-        <img src="images/avocado_toast.jpg" alt="Avocado Toast">
-        <p>Toasted bread topped with smashed avocado, lemon, and chili flakes.</p>
-      </div>
-      <p class="submitter">Submitted by Alex Green</p>
-    </article>
-
-    <article class="favourite-card">
-      <h2>Chocolate Chip Cookies</h2>
-      <div class="favourite-card-content">
-        <img src="images/cookies.jpg" alt="Chocolate Chip Cookies">
-        <p>Classic soft and chewy cookies packed with chocolate chips.</p>
-      </div>
-      <p class="submitter">Submitted by Taylor Brown</p>
-    </article>
-
-  </section>
-</main>
+        <article class="favourite-card">
+          <h2>Chocolate Chip Cookies</h2>
+          <div class="favourite-card-content">
+            <img src="images/cookies.jpg" alt="Chocolate Chip Cookies" />
+            <p>Classic soft and chewy cookies packed with chocolate chips.</p>
+          </div>
+          <p class="submitter">Submitted by Taylor Brown</p>
+        </article>
+      </section>
+    </main>
 
     <footer>
       <p>&copy; 2025 Whisk. All rights reserved.</p>

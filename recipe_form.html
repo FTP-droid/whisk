@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Recipe Submission</title>
   </head>
   <body>
     <nav class="top-nav">
-      <div class="nav-logo">whisk</div>
-      <input type="checkbox" id="menu-toggle">
+      <div class="nav-logo"><a href="index.html">whisk</a></div>
+      <input type="checkbox" id="menu-toggle" />
       <label for="menu-toggle" class="hamburger">&#9776;</label>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -25,68 +22,121 @@
       <form>
         <div class="form-group">
           <label for="first-name">First Name:</label>
-          <input type="text" id="first-name" name="first-name" placeholder="e.g., Jamie" required>
+          <input
+            type="text"
+            id="first-name"
+            name="first-name"
+            class="form-input"
+            placeholder="e.g., Jamie"
+            required
+          />
         </div>
 
         <div class="form-group">
           <label for="last-name">Last Name:</label>
-          <input type="text" id="last-name" name="last-name" placeholder="e.g., Oliver" required>
+          <input
+            type="text"
+            id="last-name"
+            name="last-name"
+            class="form-input"
+            placeholder="e.g., Oliver"
+            required
+          />
         </div>
 
         <div class="form-group">
           <label for="email">Email:</label>
-          <input type="text" id="email" name="email" placeholder="e.g., Oliver" required>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            class="form-input"
+            placeholder="e.g., Oliver"
+            required
+          />
         </div>
 
         <div class="form-group">
           <label for="recipe-name">Recipe Name:</label>
-          <input type="text" id="recipe-name" name="recipe-name" placeholder="e.g., Spaghetti Carbonara" required>
+          <input
+            type="text"
+            id="recipe-name"
+            name="recipe-name"
+            class="form-input"
+            placeholder="e.g., Spaghetti Carbonara"
+            required
+          />
         </div>
 
         <div class="form-group">
-        <label for="ingredients">Ingredients:</label>
-        <textarea id="ingredients" name="ingredients" rows="10" cols="50" placeholder="Write your recipe ingredients here..."></textarea>
+          <label for="ingredients">Ingredients:</label>
+          <textarea
+            id="ingredients"
+            name="ingredients"
+            rows="10"
+            cols="50"
+            class="form-input"
+            placeholder="Write your recipe ingredients here..."
+          ></textarea>
         </div>
 
         <div class="form-group">
-        <label for="instructions">Instructions:</label>
-        <textarea id="instructions" name="instructions" rows="10" cols="50" placeholder="Write your recipe instructions here..."></textarea>
+          <label for="instructions">Instructions:</label>
+          <textarea
+            id="instructions"
+            name="instructions"
+            rows="10"
+            cols="50"
+            class="form-input"
+            placeholder="Write your recipe instructions here..."
+          ></textarea>
         </div>
-
 
         <div class="form-group">
           <p class="radio-group-label">Recipe Type:</p>
           <div class="radio-option">
-            <input type="radio" id="vegetarian" name="type" value="Vegetarian" required>
+            <input
+              type="radio"
+              id="vegetarian"
+              name="type"
+              value="Vegetarian"
+              required
+            />
             <label for="vegetarian">Vegetarian</label>
           </div>
           <div class="radio-option">
-            <input type="radio" id="non-veg" name="type" value="Non-Vegetarian">
+            <input
+              type="radio"
+              id="non-veg"
+              name="type"
+              value="Non-Vegetarian"
+            />
             <label for="non-veg">Non-Vegetarian</label>
           </div>
-          <div class="radio-option">
-            <input type="radio" id="vegan" name="type" value="Vegan">
-            <label for="vegan">Vegan</label>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" id="vegan" name="type" value="Vegan" />
+              <label for="vegan">Vegan</label>
+            </div>
           </div>
         </div>
 
         <div class="form-group">
-        <label for="difficulty">Difficulty:</label>
-        <select id="difficulty" name="difficulty" required>
-          <option value="" disabled selected>Select difficulty</option>
-          <option value="easy">Easy</option>
-          <option value="medium">Medium</option>
-          <option value="hard">Hard</option>
-        </select>
+          <label for="difficulty">Difficulty:</label>
+          <select id="difficulty" name="difficulty" required>
+            <option value="" disabled selected>Select difficulty</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
         </div>
 
         <div class="form-group">
-        <label for="photo">Upload a Photo (optional):</label>
-        <input type="file" id="photo" name="photo" accept="image/*">
+          <label for="photo">Upload a Photo (optional):</label>
+          <input type="file" id="photo" name="photo" accept="image/*" />
         </div>
 
-        <button type="submit" class="btn submit-btn">Submit Recipe</button>
-
+        <button type="submit" class="btn">Submit Recipe</button>
       </form>
     </main>
     <footer>
