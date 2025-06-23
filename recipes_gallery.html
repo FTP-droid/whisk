@@ -1,140 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Recipes Gallery</title>
-  </head>
 
-  <body>
-    <nav class="top-nav">
-      <div class="nav-logo"><a href="index.html">whisk</a></div>
-      <input type="checkbox" id="menu-toggle" />
-      <label for="menu-toggle" class="hamburger">&#9776;</label>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="recipes_gallery.html">Recipes</a></li>
-        <li><a href="recipe_form.html">Contribute Here</a></li>
-      </ul>
-    </nav>
-    <h1>Recipes Gallery</h1>
-    <div class="search-container">
-      <label class="text-center">
-        Search for a recipe!
-        <input type="search" name="search" class="form-input" />
-      </label>
-    </div>
-    <main class="gallery-grid">
-      <article class="gallery-card">
-        <h2>Spaghetti Carbonara</h2>
-        <a href="recipes/spaghetti_carbonara.html"
-          ><span class="grandparent-article-to-link"></span
-        ></a>
-        <figure>
-          <img src="images/carbonara.jpg" alt="Spaghetti Carbonara" />
-          <figcaption>
-            Spaghetti Carbonara.
-            <br />
-            Photo by
-            <a
-              href="https://unsplash.com/photos/pasta-on-white-ceramic-plate-dvgjof0_TP8"
-            >
-              Karolina Kołodziejczak.
-            </a>
-            <br />
-            Recipe by
-            <a
-              href="https://unsplash.com/photos/pasta-on-white-ceramic-plate-dvgjof0_TP8"
-            >
-              Karolina Kołodziejczak.
-            </a>
-          </figcaption>
-        </figure>
-      </article>
-      <article class="gallery-card">
-        <h2>Spaghetti Carbonara</h2>
-        <a href="recipes/spaghetti_carbonara.html"
-          ><span class="grandparent-article-to-link"></span
-        ></a>
-        <figure>
-          <img src="images/carbonara.jpg" alt="Spaghetti Carbonara" />
-          <figcaption>
-            Spaghetti Carbonara.
-            <br />
-            Photo by
-            <a
-              href="https://unsplash.com/photos/pasta-on-white-ceramic-plate-dvgjof0_TP8"
-            >
-              Karolina Kołodziejczak.
-            </a>
-            <br />
-            Recipe by
-            <a
-              href="https://unsplash.com/photos/pasta-on-white-ceramic-plate-dvgjof0_TP8"
-            >
-              Karolina Kołodziejczak.
-            </a>
-          </figcaption>
-        </figure>
-      </article>
-      <article class="gallery-card">
-        <h2>Spaghetti Carbonara</h2>
-        <a href="recipes/spaghetti_carbonara.html"
-          ><span class="grandparent-article-to-link"></span
-        ></a>
-        <figure>
-          <img src="images/carbonara.jpg" alt="Spaghetti Carbonara" />
-          <figcaption>
-            Spaghetti Carbonara.
-            <br />
-            Photo by
-            <a
-              href="https://unsplash.com/photos/pasta-on-white-ceramic-plate-dvgjof0_TP8"
-            >
-              Karolina Kołodziejczak.
-            </a>
-            <br />
-            Recipe by
-            <a
-              href="https://unsplash.com/photos/pasta-on-white-ceramic-plate-dvgjof0_TP8"
-            >
-              Karolina Kołodziejczak.
-            </a>
-          </figcaption>
-        </figure>
-      </article>
-      <article class="gallery-card">
-        <h2>Spaghetti Carbonara</h2>
-        <a href="recipes/spaghetti_carbonara.html"
-          ><span class="grandparent-article-to-link"></span
-        ></a>
-        <figure>
-          <img src="images/carbonara.jpg" alt="Spaghetti Carbonara" />
-          <figcaption>
-            Spaghetti Carbonara.
-            <br />
-            Photo by
-            <a
-              href="https://unsplash.com/photos/pasta-on-white-ceramic-plate-dvgjof0_TP8"
-            >
-              Karolina Kołodziejczak.
-            </a>
-            <br />
-            Recipe by
-            <a
-              href="https://unsplash.com/photos/pasta-on-white-ceramic-plate-dvgjof0_TP8"
-            >
-              Karolina Kołodziejczak.
-            </a>
-          </figcaption>
-        </figure>
-        <span class="make-parent-element-to-link"></span>
-      </article>
-    </main>
-    <footer>
-      <p>&copy; 2025 Whisk. All rights reserved.</p>
-      <!-- html/css code to make block element to link is from https://stackoverflow.com/questions/796087/make-a-div-into-a-link -->
-    </footer>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Recipes Gallery</title>
+</head>
+
+<body>
+  <nav class="top-nav">
+    <div class="nav-logo"><a href="index.html">whisk</a></div>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="recipes_gallery.html">Recipes</a></li>
+      <li><a href="recipe_form.html">Contribute Here</a></li>
+    </ul>
+  </nav>
+  <h1>Recipes Gallery</h1>
+  <div class="search-container">
+    <label class="text-center">
+      Search for a recipe!
+      <input type="search" name="search" class="form-input">
+    </label>
+  </div>
+  <main class="grid">
+    <article class="card">
+      <figure>
+        <img src="../images/carbonara.jpg" alt="Spaghetti Carbonara">
+      </figure>
+      <div class="card-body">
+        <h3 class="card-title">
+          <a href="recipes/spaghetti_carbonara.html" class="recipe-link">
+            Spaghetti Carbonara
+          </a>
+        </h3>
+        <p>A creamy, cheesy classic Italian pasta with pancetta and egg.</p>
+        <div class="card-btn">
+          <a href="recipes/spaghetti_carbonara.html" class="btn">View Recipe</a>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <figure>
+        <img src="images/cauliflower.jpg" alt="Spaghetti Carbonara">
+      </figure>
+      <div class="card-body">
+        <h3 class="card-title">
+          <a href="recipes/buffalo_cauliflower.html" class="recipe-link">
+            Spicy Buffalo Cauliflower Bites
+          </a>
+        </h3>
+        <p>Crispy and spicy buffalo cauliflower bites.</p>
+        <div class="card-btn">
+          <a href="recipes/buffalo_cauliflower.html" class="btn">View Recipe</a>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <figure>
+        <img src="../images/chia-pudding.jpg" alt="Spaghetti Carbonara">
+      </figure>
+      <div class="card-body">
+        <h3 class="card-title">
+          <a href="recipes/chia_pudding.html" class="recipe-link">
+            Chia Pudding with Almond Butter and Berries
+          </a>
+        </h3>
+        <p>Creamy chia pudding topped with almond butter and fresh berries</p>
+        <div class="card-btn">
+          <a href="recipes/chia_pudding.html" class="btn">View Recipe</a>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <figure>
+        <img src="images/caponata.jpg" alt="Spaghetti Carbonara">
+      </figure>
+      <div class="card-body">
+        <h3 class="card-title">
+          <a href="recipes/eggplant_caponata.html" class="recipe-link">
+            Eggplant Caponata
+          </a>
+        </h3>
+        <p>Rich and flavorful Sicilian eggplant caponata.</p>
+        <div class="card-btn">
+          <a href="recipes/eggplant_caponata.html" class="btn">View Recipe</a>
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer>
+    <p>&copy; 2025 Whisk. All rights reserved.</p>
+    <p>Photo sourced from <a href="https://www.pexels.com/">pexels.com</a> </p>
+    <p>Recipes sourced from <a href="https://foodgawker.com/">foodgawker.com</a> </p>
+  </footer>
+</body>
+
 </html>

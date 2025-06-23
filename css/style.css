@@ -205,7 +205,7 @@ footer {
     color: var(--color-text);
 }
 
-.card-actions {
+.card-btn {
     display: flex;
     justify-content: flex-end;
 }
@@ -379,13 +379,14 @@ form {
     flex-direction: column;
     gap: var(--spacing-xl);
     margin-bottom: var(--spacing-xl);
+    margin-left: var(--spacing-lg);
 }
 
 /* =================================== */
 /* GALLERY                             */
 /* =================================== */
 
-.gallery-grid {
+.grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--spacing-xl);
@@ -472,7 +473,7 @@ form {
         max-width: 45%;
     }
 
-    .gallery-grid {
+    .grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -505,7 +506,7 @@ form {
 }
 
 @media (min-width: 1280px) {
-    .gallery-grid {
+    .grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }

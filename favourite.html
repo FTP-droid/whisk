@@ -1,60 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>My Favourite Recipes</title>
-  </head>
-  <body>
-    <nav class="top-nav">
-      <div class="nav-logo"><a href="index.html">whisk</a></div>
-      <input type="checkbox" id="menu-toggle" />
-      <label for="menu-toggle" class="hamburger">&#9776;</label>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="recipes_gallery.html">Recipes</a></li>
-        <li><a href="recipe_form.html">Contribute Here</a></li>
-      </ul>
-    </nav>
 
-    <main>
-      <h1>My Favourite Recipes</h1>
-      <section class="favourites-container">
-        <article class="favourite-card">
-          <h2>Spaghetti Carbonara</h2>
-          <div class="favourite-card-content">
-            <img src="images/carbonara.jpg" alt="Spaghetti Carbonara" />
-            <p>A creamy pasta dish with pancetta, eggs, and Parmesan cheese.</p>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  <title>My Favourite Recipes</title>
+</head>
+
+<body>
+  <nav class="top-nav">
+    <div class="nav-logo"><a href="index.html">whisk</a></div>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="recipes_gallery.html">Recipes</a></li>
+      <li><a href="recipe_form.html">Contribute Here</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>My Favourite Recipes</h1>
+    <div class="grid">
+      <article class="card">
+        <figure>
+          <img src="../images/carbonara.jpg" alt="Spaghetti Carbonara">
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title">
+            <a href="recipes/spaghetti_carbonara.html" class="recipe-link">
+              Spaghetti Carbonara
+            </a>
+          </h3>
+          <p>A creamy, cheesy classic Italian pasta with pancetta and egg.</p>
+          <div class="card-btn">
+            <a href="recipes/spaghetti_carbonara.html" class="btn">View Recipe</a>
           </div>
-          <p class="submitter">Submitted by Jamie Oliver</p>
-        </article>
-
-        <article class="favourite-card">
-          <h2>Avocado Toast</h2>
-          <div class="favourite-card-content">
-            <img src="images/avocado_toast.jpg" alt="Avocado Toast" />
-            <p>
-              Toasted bread topped with smashed avocado, lemon, and chili
-              flakes.
-            </p>
+        </div>
+      </article>
+      <article class="card">
+        <figure>
+          <img src="images/cauliflower.jpg" alt="Spaghetti Carbonara">
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title">
+            <a href="recipes/buffalo_cauliflower.html" class="recipe-link">
+              Spicy Buffalo Cauliflower Bites
+            </a>
+          </h3>
+          <p>Crispy and spicy buffalo cauliflower bites.</p>
+          <div class="card-btn">
+            <a href="recipes/buffalo_cauliflower.html" class="btn">View Recipe</a>
           </div>
-          <p class="submitter">Submitted by Alex Green</p>
-        </article>
-
-        <article class="favourite-card">
-          <h2>Chocolate Chip Cookies</h2>
-          <div class="favourite-card-content">
-            <img src="images/cookies.jpg" alt="Chocolate Chip Cookies" />
-            <p>Classic soft and chewy cookies packed with chocolate chips.</p>
+        </div>
+      </article>
+      <article class="card">
+        <figure>
+          <img src="../images/chia-pudding.jpg" alt="Spaghetti Carbonara">
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title">
+            <a href="recipes/chia_pudding.html" class="recipe-link">
+              Chia Pudding with Almond Butter and Berries
+            </a>
+          </h3>
+          <p>Creamy chia pudding topped with almond butter and fresh berries</p>
+          <div class="card-btn">
+            <a href="recipes/chia_pudding.html" class="btn">View Recipe</a>
           </div>
-          <p class="submitter">Submitted by Taylor Brown</p>
-        </article>
-      </section>
-    </main>
+        </div>
+      </article>
+      <article class="card">
+        <figure>
+          <img src="images/caponata.jpg" alt="Spaghetti Carbonara">
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title">
+            <a href="recipes/eggplant_caponata.html" class="recipe-link">
+              Eggplant Caponata
+            </a>
+          </h3>
+          <p>Rich and flavorful Sicilian eggplant caponata.</p>
+          <div class="card-btn">
+            <a href="recipes/eggplant_caponata.html" class="btn">View Recipe</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
 
-    <footer>
-      <p>&copy; 2025 Whisk. All rights reserved.</p>
-    </footer>
-  </body>
+  <footer>
+    <p>&copy; 2025 Whisk. All rights reserved.</p>
+    <p>Photo sourced from <a href="https://www.pexels.com/">pexels.com</a> </p>
+    <p>Recipes sourced from <a href="https://foodgawker.com/">foodgawker.com</a> </p>
+  </footer>
+</body>
+
 </html>
