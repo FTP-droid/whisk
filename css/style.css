@@ -289,13 +289,6 @@ form {
     font-family: var(--font-main);
 }
 
-.form-error {
-    color: var(--color-danger);
-    font-size: 0.875rem;
-    margin-top: -0.5rem;
-    margin-bottom: var(--spacing-md);
-}
-
 .radio-group {
     display: flex;
     flex-direction: column;
