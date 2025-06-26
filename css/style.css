@@ -157,6 +157,10 @@ footer {
     list-style-type: none;
 }
 
+#tips-of-the-day {
+    padding-bottom: 0;
+}
+
 /* =================================== */
 /* CARD COMPONENTS                     */
 /* =================================== */
