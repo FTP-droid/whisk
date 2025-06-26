@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="../css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spaghetti Carbonara</title>
+  <title>Whisk | Spaghetti Carbonara</title>
 </head>
 
 <body>
@@ -18,11 +18,12 @@
       <li><a href="../about.html">About</a></li>
       <li><a href="../contact.html">Contact</a></li>
       <li><a href="../recipes_gallery.html">Recipes</a></li>
+      <li><a href="../favourites.html">Favourites</a></li>
       <li><a href="../recipe_form.html">Contribute Here</a></li>
     </ul>
   </nav>
 
-  <main class="recipe-page">
+  <main class="recipe-page" aria-labelledby="classic-spaghetti-carbonara">
     <h1>Classic Spaghetti Carbonara</h1>
     <div class="recipe-intro-group">
       <figure class="recipe-image">
@@ -33,8 +34,8 @@
         </figcaption>
       </figure>
 
-      <section class="recipe-section ingredients-card">
-        <h2>Ingredients</h2>
+      <section class="recipe-section ingredients-card" aria-labelledby="ingredients">
+        <h2 id="ingredients">Ingredients</h2>
         <ul>
           <li>200g spaghetti</li>
           <li>100g pancetta</li>
@@ -45,8 +46,8 @@
       </section>
     </div>
 
-    <div class="recipe-instruction">
-      <h2>Instructions</h2>
+    <div class="recipe-instruction" aria-labelledby="instructions">
+      <h2 id="instructions">Instructions</h2>
       <ol>
         <li>Cook spaghetti in salted water until al dente.</li>
         <li>Fry pancetta until crispy.</li>
@@ -59,8 +60,8 @@
       </ol>
     </div>
 
-    <button class="btn">Print Recipe</button>
-    <button class="btn">Favourite</button>
+    <button class="btn" aria-label="Print the spaghetti carbonara recipe">Print Recipe</button>
+    <button class="btn" aria-label="Favourite the spaghetti carbonara recipe">Favourite</button>
   </main>
 
   <footer>

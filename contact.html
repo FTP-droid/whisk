@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <title>Contact Whisk</title>
+  <title>Whisk | Contact</title>
 </head>
 
 <body>
@@ -16,43 +17,44 @@
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="recipes_gallery.html">Recipes</a></li>
+      <li><a href="favourites.html">Favourites</a></li>
       <li><a href="recipe_form.html">Contribute Here</a></li>
     </ul>
   </nav>
 
-  <main class="text-center">
-    <h1>Contact Us</h1>
+  <main class="text-center" aria-labelledby="contact-us">
+    <h1 id="contact-us">Contact Us</h1>
 
-    <section class="search-container">
-      <p>
+    <section class="generic-container" aria-labelledby="contact-us-page-hint">
+      <p id="contact-us-page-hint">
         If you have any questions, feedback, or recipe ideas, we'd love to hear
         from you! Here's how you can get in touch with us:
       </p>
     </section>
 
-    <section class="search-container">
-      <h2>Email</h2>
+    <section class="generic-container" aria-labelledby="email">
+      <h2 id="email">Email</h2>
       <p>
         <a href="mailto:info@whisk.com">info@whisk.com</a>
       </p>
     </section>
 
-    <section class="search-container">
-      <h2>Phone</h2>
+    <section class="generic-container" aria-labelledby="phone">
+      <h2 id="phone">Phone</h2>
       <p>+1 (123) 456-7890</p>
     </section>
 
-    <section class="search-container">
-      <h2>Social Media</h2>
-      <ul style="list-style: none; padding: 0; font-family: var(--font-secondary); display: flex; flex-direction: column; gap: var(--spacing-sm);">
-        <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
-        <li><a href="https://www.twitter.com/" target="_blank">Twitter</a></li>
-        <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+    <section class="generic-container" aria-labelledby="social-media">
+      <h2 id="social-media">Social Media</h2>
+      <ul class="socials-list">
+        <li><a href="https://www.instagram.com/" target="_blank" aria-label="Visit Whisk's Instagram page">Instagram</a></li>
+        <li><a href="https://www.twitter.com/" target="_blank" aria-label="Visit Whisk's Twitter">Twitter</a></li>
+        <li><a href="https://www.facebook.com/" target="_blank" aria-label="Visit Whisk's Facebook page">Facebook</a></li>
       </ul>
     </section>
 
-    <section class="search-container">
-      <h2>Send Us a Message</h2>
+    <section class="generic-container" aria-labelledby="send-us-a-message">
+      <h2 id="send-us-a-message">Send Us a Message</h2>
       <form action="#" method="post">
         <div class="form-group">
           <label for="name">Name:</label>
@@ -69,15 +71,15 @@
           <textarea id="message" name="message" rows="5" class="form-input" required></textarea>
         </div>
 
-        <button type="submit" class="btn">Send message</button>
+        <button type="submit" class="btn" aria-label="Send your message to the creators of Whisk">Send message</button>
       </form>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Whisk. All rights reserved.</p>
-    <p>Photo sourced from <a href="https://www.pexels.com/" style="color:white; text-decoration: underline;">pexels.com</a></p>
-    <p>Recipes sourced from <a href="https://foodgawker.com/" style="color:white; text-decoration: underline;">foodgawker.com</a></p>
+    <p>Photo sourced from <a href="https://www.pexels.com/">pexels.com</a></p>
+    <p>Recipes sourced from <a href="https://foodgawker.com/">foodgawker.com</a></p>
   </footer>
 </body>
 </html>

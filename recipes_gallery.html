@@ -3,8 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <title>Recipes Gallery</title>
+  <title>Whisk | Recipes Gallery</title>
 </head>
 
 <body>
@@ -17,110 +18,111 @@
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="recipes_gallery.html">Recipes</a></li>
+      <li><a href="favourites.html">Favourites</a></li>
       <li><a href="recipe_form.html">Contribute Here</a></li>
     </ul>
   </nav>
   <h1>Recipes Gallery</h1>
-  <div class="search-container">
+  <div class="generic-container">
     <label class="text-center">
       Search for a recipe!
       <input type="search" name="search" class="form-input">
     </label>
   </div>
   <main class="grid">
-    <article class="card">
+    <article class="card" aria-labelledby="spaghetti-carbonara">
       <figure>
         <img src="images/carbonara.jpg" alt="Spaghetti Carbonara">
       </figure>
       <div class="card-body">
-        <h3 class="card-title">
+        <h3 class="card-title" id="spaghetti-carbonara">
           <a href="recipes/spaghetti_carbonara.html" class="recipe-link">
             Spaghetti Carbonara
           </a>
         </h3>
         <p>A creamy, cheesy classic Italian pasta with pancetta and egg.</p>
-      </div>
-      <div class="card-btn">
-          <a href="recipes/spaghetti_carbonara.html" class="btn">View Recipe</a>
+        <div class="card-link">
+          <a href="recipes/spaghetti_carbonara.html" class="link">View Recipe</a>
+        </div>
       </div>
     </article>
-    <article class="card">
+    <article class="card" aria-labelledby="buffalo-cauliflower">
       <figure>
         <img src="images/cauliflower.jpg" alt="Buffalo Cauliflower">
       </figure>
       <div class="card-body">
-        <h3 class="card-title">
+        <h3 class="card-title" id="buffalo-cauliflower">
           <a href="recipes/buffalo_cauliflower.html" class="recipe-link">
             Spicy Buffalo Cauliflower Bites
           </a>
         </h3>
         <p>Crispy and spicy buffalo cauliflower bites.</p>
-        <div class="card-btn">
-          <a href="recipes/buffalo_cauliflower.html" class="btn">View Recipe</a>
+        <div class="card-link">
+          <a href="recipes/buffalo_cauliflower.html" class="link">View Recipe</a>
         </div>
       </div>
     </article>
-    <article class="card">
+    <article class="card" aria-labelledby="chia-pudding">
       <figure>
         <img src="images/chia-pudding.jpg" alt="Chia Pudding">
       </figure>
       <div class="card-body">
-        <h3 class="card-title">
+        <h3 class="card-title" id="chia-pudding">
           <a href="recipes/chia_pudding.html" class="recipe-link">
             Chia Pudding with Almond Butter and Berries
           </a>
         </h3>
         <p>Creamy chia pudding topped with almond butter and fresh berries</p>
-        <div class="card-btn">
-          <a href="recipes/chia_pudding.html" class="btn">View Recipe</a>
+        <div class="card-link">
+          <a href="recipes/chia_pudding.html" class="link">View Recipe</a>
         </div>
       </div>
     </article>
-    <article class="card">
+    <article class="card" aria-labelledby="caponata">
       <figure>
-        <img src="images/caponata.jpg" alt="Eggplan Caponata">
+        <img src="images/caponata.jpg" alt="Eggplant Caponata">
       </figure>
       <div class="card-body">
-        <h3 class="card-title">
+        <h3 class="card-title" id="caponata">
           <a href="recipes/eggplant_caponata.html" class="recipe-link">
             Eggplant Caponata
           </a>
         </h3>
         <p>Rich and flavorful Sicilian eggplant caponata.</p>
-        <div class="card-btn">
-          <a href="recipes/eggplant_caponata.html" class="btn">View Recipe</a>
+        <div class="card-link">
+          <a href="recipes/eggplant_caponata.html" class="link">View Recipe</a>
         </div>
       </div>
     </article>
-    <article class="card">
+    <article class="card" aria-labelledby="bunless-burger">
       <figure>
         <img src="images/bunless-burger.jpg" alt="Bunless Burger">
       </figure>
       <div class="card-body">
-        <h3 class="card-title">
+        <h3 class="card-title" id="bunless-burger">
           <a href="recipes/bunless_burger.html" class="recipe-link">
             Bunless Burger
           </a>
         </h3>
         <p>Juicy bunless burger wrapped in fresh lettuce with creamy avocado.</p>
-        <div class="card-btn">
-          <a href="recipes/bunless_burger.html" class="btn">View Recipe</a>
+        <div class="card-link">
+          <a href="recipes/bunless_burger.html" class="link">View Recipe</a>
         </div>
       </div>
     </article>
-    <article class="card">
+    <article class="card" aria-labelledby="zucchini-noodles">
       <figure>
         <img src="images/zucchini-noodle.jpg" alt="Zucchini Noodle">
       </figure>
       <div class="card-body">
-        <h3 class="card-title">
-          <a href="recipes/zucchini_noodle.html" class="recipe-link">
-            Zucchini Noodle
+        <h3 class="card-title" id="zucchini-noodle">
+          <a href="recipes/zucchini_noodles.html" class="recipe-link">
+            Zucchini Noodles
           </a>
         </h3>
         <p>Fresh zucchini noodles with homemade basil pesto.</p>
-        <div class="card-btn">
-          <a href="recipes/zucchini_noodle.html" class="btn">View Recipe</a>
+        <div class="card-link">
+          <a href="recipes/zucchini_noodles.html" class="link">View Recipe</a>
         </div>
       </div>
     </article>

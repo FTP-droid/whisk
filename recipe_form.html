@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <title>Whisk | Submit a Recipe</title>
 </head>
@@ -17,12 +18,13 @@
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="recipes_gallery.html">Recipes</a></li>
+      <li><a href="favourites.html">Favourites</a></li>
       <li><a href="recipe_form.html">Contribute Here</a></li>
     </ul>
   </nav>
-  <main>
+  <main class="recipe-form-main">
     <h1>Submit Your Recipe</h1>
-    <form>
+    <form action="#" method="post">
       <div class="form-group">
         <label for="first-name">First Name:</label>
         <input type="text" id="first-name" name="first-name" class="form-input" placeholder="e.g., John" required>
@@ -35,7 +37,7 @@
 
       <div class="form-group">
         <label for="email">Email:</label>
-        <input type="text" id="email" name="email" class="form-input" placeholder="e.g., john@whisk.com" required>
+        <input type="email" id="email" name="email" class="form-input" placeholder="e.g., john@whisk.com" required>
       </div>
 
       <div class="form-group">
@@ -47,17 +49,17 @@
       <div class="form-group">
         <label for="ingredients">Ingredients:</label>
         <textarea id="ingredients" name="ingredients" rows="10" cols="50" class="form-input"
-          placeholder="Write your recipe ingredients here..."></textarea>
+          placeholder="Write your recipe ingredients here..." required></textarea>
       </div>
 
       <div class="form-group">
         <label for="instructions">Instructions:</label>
         <textarea id="instructions" name="instructions" rows="10" cols="50" class="form-input"
-          placeholder="Write your recipe instructions here..."></textarea>
+          placeholder="Write your recipe instructions here..." required></textarea>
       </div>
 
-      <div class="form-group">
-        <p class="radio-group-label">Recipe Type:</p>
+      <fieldset class="form-group">
+        <legend class="radio-group-label" id="recipe-type">Recipe Type:</legend>
         <div class="radio-option">
           <input type="radio" id="vegetarian" name="type" value="Vegetarian" required>
           <label for="vegetarian">Vegetarian</label>
@@ -72,7 +74,7 @@
             <label for="vegan">Vegan</label>
           </div>
         </div>
-      </div>
+      </fieldset>
 
       <div class="form-group">
         <label for="difficulty">Difficulty:</label>
@@ -89,7 +91,7 @@
         <input type="file" id="photo" name="photo" accept="image/*">
       </div>
 
-      <button type="submit" class="btn">Submit Recipe</button>
+      <button type="submit" class="link">Submit Recipe</button>
     </form>
   </main>
   <footer>

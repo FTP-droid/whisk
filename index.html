@@ -18,20 +18,21 @@
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="recipes_gallery.html">Recipes</a></li>
+      <li><a href="favourites.html">Favourites</a></li>
       <li><a href="recipe_form.html">Contribute Here</a></li>
     </ul>
   </nav>
 
   <main>
-    <section>
-      <h1>Trending Recipes</h1>
+    <section aria-labelledby="trending-recipes">
+      <h1 id="trending-recipes">Trending Recipes</h1>
       <div class="carousel">
-        <article class="card">
+        <article class="card" aria-labelledby="spaghetti-carbonara">
           <figure>
             <img src="images/carbonara.jpg" alt="Spaghetti Carbonara">
           </figure>
           <div class="card-body">
-            <h3 class="card-title">
+            <h3 class="card-title" id="spaghetti-carbonara">
               <a href="recipes/spaghetti_carbonara.html" class="recipe-link">
                 Spaghetti Carbonara
               </a>
@@ -39,17 +40,17 @@
             <p>
               A creamy, cheesy classic Italian pasta with pancetta and egg.
             </p>
-            <div class="card-btn">
-              <a href="recipes/spaghetti_carbonara.html" class="btn">View Recipe</a>
+            <div class="card-link">
+              <a href="recipes/spaghetti_carbonara.html" class="link">View Recipe</a>
             </div>
           </div>
         </article>
-        <article class="card">
+        <article class="card" aria-labelledby="chia-pudding">
           <figure>
             <img src="images/chia-pudding.jpg" alt="Chia Pudding">
           </figure>
           <div class="card-body">
-            <h3 class="card-title">
+            <h3 class="card-title" id="chia-pudding">
               <a href="recipes/chia_pudding.html" class="recipe-link">
                 Chia Pudding with Almond Butter and Berries
               </a>
@@ -57,43 +58,44 @@
             <p>
               Creamy chia pudding topped with almond butter and fresh berries
             </p>
-            <div class="card-btn">
-              <a href="recipes/chia_pudding.html" class="btn">View Recipe</a>
+            <div class="card-link">
+              <a href="recipes/chia_pudding.html" class="link">View Recipe</a>
             </div>
           </div>
         </article>
-        <article class="card">
+        <article class="card" aria-labelledby="buffalo-cauliflower">
           <figure>
             <img src="images/cauliflower.jpg" alt="Buffalo Cauliflower">
           </figure>
           <div class="card-body">
-            <h3 class="card-title">
+            <h3 class="card-title" id="buffalo-cauliflower">
               <a href="recipes/buffalo_cauliflower.html" class="recipe-link">
                 Spicy Buffalo Cauliflower Bites
               </a>
             </h3>
             <p>Crispy and spicy buffalo cauliflower bites.</p>
-            <div class="card-btn">
-              <a href="recipes/buffalo_cauliflower.html" class="btn">View Recipe</a>
+            <div class="card-link">
+              <a href="recipes/buffalo_cauliflower.html" class="link">View Recipe</a>
             </div>
           </div>
         </article>
       </div>
-
-      <h1>Browse by Cuisine</h1>
+    </section>
+    <section aria-labelledby="cuisine">
+      <h1 id="cuisine">Browse by Cuisine</h1>
       <div class="carousel">
-        <article class="card-overlay" style="background-image: url('images/italian.jpg')">
+        <article class="card-overlay" style="background-image: url('images/italian.jpg')" aria-labelledby="italian">
           <div class="card-text">
-            <h3>
+            <h3 id="italian">
               <a href="recipes/spaghetti_carbonara.html" class="recipe-link">
                 Italian
               </a>
             </h3>
           </div>
         </article>
-        <article class="card-overlay" style="background-image: url('images/american.jpg')">
+        <article class="card-overlay" style="background-image: url('images/american.jpg')" aria-labelledby="american">
           <div class="card-text">
-            <h3>
+            <h3 id="american">
               <a href="recipes/bunless_burger.html" class="recipe-link">
                 American
               </a>
@@ -101,12 +103,13 @@
           </div>
         </article>
       </div>
-
-      <h1>Browse by Diet</h1>
+    </section>
+    <section aria-labelledby="diet">
+      <h1 id="diet">Browse by Diet</h1>
       <div class="carousel">
-        <article class="card-overlay" style="background-image: url('images/vegan.jpg')">
+        <article class="card-overlay" style="background-image: url('images/vegan.jpg')" aria-labelledby="vegan">
           <div class="card-text">
-            <h3>
+            <h3 id="vegan">
               <a href="recipes/eggplant_caponata.html" class="recipe-link">
                 Vegan
               </a>
@@ -114,19 +117,19 @@
           </div>
         </article>
 
-        <article class="card-overlay" style="background-image: url('images/keto.jpg')">
+        <article class="card-overlay" style="background-image: url('images/keto.jpg')" aria-labelledby="keto">
           <div class="card-text">
-            <h3>
-              <a href="recipes/zucchini_noodle.html" class="recipe-link">
+            <h3 id="keto">
+              <a href="recipes/zucchini_noodles.html" class="recipe-link">
                 Keto
               </a>
             </h3>
           </div>
         </article>
 
-        <article class="card-overlay" style="background-image: url('images/paleo.jpg')">
+        <article class="card-overlay" style="background-image: url('images/paleo.jpg')" aria-labelledby="paleo">
           <div class="card-text">
-            <h3>
+            <h3 id="paleo">
               <a href="recipes/chia_pudding.html" class="recipe-link">
                 Paleo
               </a>
@@ -138,8 +141,8 @@
   </main>
 
   <aside class="card">
-    <div class="card-body">
-      <h2 class="card-title">Tips of The Day</h2>
+    <div class="card-body" aria-labelledby="tips-of-the-day">
+      <h2 class="card-title" id="tips-of-the-day">Tips of The Day</h2>
       <p>Use fresh ingredients for the best flavor.</p>
       <p>Always read the full recipe before starting.</p>
     </div>
