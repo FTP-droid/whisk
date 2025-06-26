@@ -24,9 +24,10 @@
   </nav>
 
   <main>
+    <h1>Welcome to Whisk!</h1>
     <section aria-labelledby="trending-recipes">
-      <h1 id="trending-recipes">Trending Recipes</h1>
-      <div class="carousel">
+      <h2 id="trending-recipes">Trending Recipes</h2>
+      <div class="carousel" aria-roledescription="carousel">
         <article class="card" aria-labelledby="spaghetti-carbonara">
           <figure>
             <img src="images/carbonara.jpg" alt="Spaghetti Carbonara">
@@ -82,59 +83,54 @@
       </div>
     </section>
     <section aria-labelledby="cuisine">
-      <h1 id="cuisine">Browse by Cuisine</h1>
-      <div class="carousel">
+      <h2 id="cuisine">Browse by Cuisine</h2>
+      <div class="carousel" aria-roledescription="carousel">
         <article class="card-overlay" style="background-image: url('images/italian.jpg')" aria-labelledby="italian">
           <div class="card-text">
             <h3 id="italian">
-              <a href="recipes/spaghetti_carbonara.html" class="recipe-link">
                 Italian
-              </a>
             </h3>
           </div>
+          <a href="recipes/spaghetti_carbonara.html" aria-label="This tag will turn the parent article into a link to a random Italian recipe"><span class="grandparent-tag-to-link"></span></a>
         </article>
         <article class="card-overlay" style="background-image: url('images/american.jpg')" aria-labelledby="american">
           <div class="card-text">
             <h3 id="american">
-              <a href="recipes/bunless_burger.html" class="recipe-link">
                 American
-              </a>
             </h3>
           </div>
+          <a href="recipes/bunless_burger.html" aria-label="This a tag will turn the parent article into a link to a random American recipe"><span class="grandparent-tag-to-link"></span></a>
         </article>
       </div>
     </section>
     <section aria-labelledby="diet">
-      <h1 id="diet">Browse by Diet</h1>
-      <div class="carousel">
+      <h2 id="diet">Browse by Diet</h2>
+      <div class="carousel" aria-roledescription="carousel">
         <article class="card-overlay" style="background-image: url('images/vegan.jpg')" aria-labelledby="vegan">
           <div class="card-text">
             <h3 id="vegan">
-              <a href="recipes/eggplant_caponata.html" class="recipe-link">
                 Vegan
-              </a>
             </h3>
           </div>
+          <a href="recipes/eggplant_caponata.html" aria-label="This a tag will turn the parent article into a link to a random vegan recipe"><span class="grandparent-tag-to-link"></span></a>
         </article>
 
         <article class="card-overlay" style="background-image: url('images/keto.jpg')" aria-labelledby="keto">
           <div class="card-text">
             <h3 id="keto">
-              <a href="recipes/zucchini_noodles.html" class="recipe-link">
                 Keto
-              </a>
             </h3>
           </div>
+          <a href="recipes/zucchini_noodles.html" aria-label="This a tag will turn the parent article into a link to a random keto recipe"><span class="grandparent-tag-to-link"></span></a>
         </article>
 
         <article class="card-overlay" style="background-image: url('images/paleo.jpg')" aria-labelledby="paleo">
           <div class="card-text">
             <h3 id="paleo">
-              <a href="recipes/chia_pudding.html" class="recipe-link">
                 Paleo
-              </a>
             </h3>
           </div>
+          <a href="recipes/chia_pudding.html" aria-label="This a tag will turn the parent article into a link to a random paleo recipe"><span class="grandparent-tag-to-link"></span></a>
         </article>
       </div>
     </section>
@@ -143,8 +139,10 @@
   <aside class="card">
     <div class="card-body" aria-labelledby="tips-of-the-day">
       <h2 class="card-title" id="tips-of-the-day">Tips of The Day</h2>
-      <p>Use fresh ingredients for the best flavor.</p>
-      <p>Always read the full recipe before starting.</p>
+      <ul id="tips-list">
+        <li>Use fresh ingredients for the best flavor.</li>
+        <li>Always read the full recipe before starting.</li>
+      </ul>
     </div>
   </aside>
 
