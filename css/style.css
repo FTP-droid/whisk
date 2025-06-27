@@ -42,13 +42,14 @@
 
 body {
     font-family: var(--font-main);
-    font-size: 16px;
+    font-size: 1rem;
     background-color: var(--color-bg);
     color: var(--color-text);
     line-height: 1.6;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-family: var(--font-secondary);
     padding-bottom: var(--spacing-lg);
     text-align: center;
@@ -84,7 +85,7 @@ nav {
     position: relative;
 }
 
-.nav-logo > a {
+.nav-logo>a {
     font-size: 3rem;
     font-weight: bold;
     color: var(--color-logo);
@@ -260,13 +261,13 @@ footer {
     text-decoration: underline;
 }
 
-.grandparent-tag-to-link{ 
-  position:absolute; 
-  width:100%;
-  height:100%;
-  top:0;
-  left: 0;
-  z-index: 1;
+.card-link-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 /* Source code for parent-block-to-link class and HTML syntax is from */
@@ -314,11 +315,10 @@ form {
     font-size: 1rem;
     background-color: white;
     font-family: var(--font-main);
-    font-size: 14px;
 }
 
 .form-input::placeholder {
-    font-size: 14px;
+    font-size: 1rem;
     font-family: var(--font-main);
 }
 
@@ -345,7 +345,8 @@ form {
 /* BUTTONS                             */
 /* =================================== */
 
-.link, .btn {
+.link,
+.btn {
     display: inline-block;
     padding: 0.75rem 1.25rem;
     background-color: var(--color-primary);
@@ -359,7 +360,8 @@ form {
     text-decoration: none;
 }
 
-.link:hover, .btn {
+.link:hover,
+.btn:hover {
     background-color: #86af5f;
 }
 
@@ -390,7 +392,8 @@ form {
 }
 
 .recipe-image img {
-  width: 300px;
+    width: 100%;
+    height: auto;
 }
 
 .ingredients-card ul {
@@ -479,8 +482,8 @@ form {
 /* =================================== */
 
 .authors-list {
-    list-style: none; 
-    padding: 0; 
+    list-style: none;
+    padding: 0;
     font-family: var(--font-secondary);
     font-size: 1.25rem;
 }
@@ -490,12 +493,13 @@ form {
 /* =================================== */
 
 .socials-list {
-    list-style: none; 
-    padding: 0; 
-    font-family: var(--font-secondary); 
-    display: flex; 
-    flex-direction: column; gap: 
-    var(--spacing-sm);
+    list-style: none;
+    padding: 0;
+    font-family: var(--font-secondary);
+    display: flex;
+    flex-direction: column;
+    gap:
+        var(--spacing-sm);
 }
 
 /* =================================== */
@@ -522,9 +526,9 @@ form {
         flex-wrap: wrap;
     }
 
-    .carousel > .card {
-        flex: 1 1 45%;
-        max-width: 45%;
+    .carousel>.card {
+        flex: 1 1 30%;
+        max-width: 30%;
     }
 
     .grid {
@@ -550,13 +554,6 @@ form {
         height: auto;
     }
 
-}
-
-@media (min-width: 1024px) {
-    .carousel > .card {
-        flex: 1 1 30%;
-        max-width: 30%;
-    }
 }
 
 @media (min-width: 1280px) {
