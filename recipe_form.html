@@ -23,43 +23,45 @@
     </ul>
   </nav>
   <main class="recipe-form-main">
+    <p><em>All fields marked with * are required.</em></p>
+
     <h1>Submit Your Recipe</h1>
     <form action="#" method="post">
       <div class="form-group">
-        <label for="first-name">First Name:</label>
+        <label for="first-name">First Name: *</label>
         <input type="text" id="first-name" name="first-name" class="form-input" placeholder="e.g., John" required>
       </div>
 
       <div class="form-group">
-        <label for="last-name">Last Name:</label>
+        <label for="last-name">Last Name: *</label>
         <input type="text" id="last-name" name="last-name" class="form-input" placeholder="e.g., Doe" required>
       </div>
 
       <div class="form-group">
-        <label for="email">Email:</label>
+        <label for="email">Email: * </label>
         <input type="email" id="email" name="email" class="form-input" placeholder="e.g., john@whisk.com" required>
       </div>
 
       <div class="form-group">
-        <label for="recipe-name">Recipe Name:</label>
+        <label for="recipe-name">Recipe Name: *</label>
         <input type="text" id="recipe-name" name="recipe-name" class="form-input"
           placeholder="e.g., Spaghetti Carbonara" required>
       </div>
 
       <div class="form-group">
-        <label for="ingredients">Ingredients:</label>
+        <label for="ingredients">Ingredients: *</label>
         <textarea id="ingredients" name="ingredients" rows="10" cols="50" class="form-input"
           placeholder="Write your recipe ingredients here..." required></textarea>
       </div>
 
       <div class="form-group">
-        <label for="instructions">Instructions:</label>
+        <label for="instructions">Instructions: *</label>
         <textarea id="instructions" name="instructions" rows="10" cols="50" class="form-input"
           placeholder="Write your recipe instructions here..." required></textarea>
       </div>
 
       <fieldset class="form-group" aria-labelledby="recipe-type">
-        <legend class="radio-group-label" id="recipe-type">Recipe Type:</legend>
+        <legend class="radio-group-label" id="recipe-type">Recipe Type: *</legend>
         <div class="radio-option">
           <input type="radio" id="vegetarian" name="type" value="Vegetarian" required>
           <label for="vegetarian">Vegetarian</label>
@@ -77,13 +79,16 @@
       </fieldset>
 
       <div class="form-group">
-        <label for="difficulty">Difficulty:</label>
-        <select id="difficulty" name="difficulty" required>
-          <option value="" disabled selected>Select difficulty</option>
-          <option value="easy">Easy</option>
-          <option value="medium">Medium</option>
-          <option value="hard">Hard</option>
-        </select>
+        <fieldset class="form-group" aria-labelledby="difficulty-label">
+          <legend id="difficulty-label">Difficulty: *</legend>
+          <select id="difficulty" name="difficulty" required>
+            <option value="" disabled selected>Select difficulty</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+</fieldset>
+
       </div>
 
       <div class="form-group">
@@ -93,6 +98,9 @@
 
       <button type="submit" class="link">Submit Recipe</button>
     </form>
+
+    <p class="form-note" aria-live="polite">Once submitted, we will display a confirmation message here.</p>
+
   </main>
   <footer>
     <p>&copy; 2025 Whisk. All rights reserved.</p>
