@@ -13,8 +13,6 @@ searchInput.addEventListener('keyup', e => {
         const articleText = article.innerText;
         const articleTextLowerCase = articleText.toLowerCase();
         const articleTextNoViewRecipeText = articleTextLowerCase.replace("view recipe", "");
-        console.log(articleTextLowerCase);
-        console.log(searchLowerCase);
         if(articleTextNoViewRecipeText.includes(searchLowerCase)){
             article.style.display = "grid";
         } else {
