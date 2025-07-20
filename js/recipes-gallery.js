@@ -11,10 +11,11 @@ searchInput.addEventListener('keyup', e => {
 
     for(article of allRecipeCards.children){
         const articleText = article.innerText;
-        const articleTextNoViewRecipeText = articleText.slice(0, -11);
-        const articleTextLowerCase = articleTextNoViewRecipeText.toLowerCase();
+        const articleTextLowerCase = articleText.toLowerCase();
+        const articleTextNoViewRecipeText = articleTextLowerCase.replace("view recipe", "");
         console.log(articleTextLowerCase);
-        if(articleTextLowerCase.includes(searchLowerCase)){
+        console.log(searchLowerCase);
+        if(articleTextNoViewRecipeText.includes(searchLowerCase)){
             article.style.display = "grid";
         } else {
             article.style.display = "none";
