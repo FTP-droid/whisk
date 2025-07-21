@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const recipeId = recipePage.getAttribute("aria-labelledby");
     const recipeTitle = document.getElementById(recipeId).textContent;
     const recipeImageSrc = document.querySelector(".recipe-image img").src;
-    const imagePath = `../${recipeImageSrc.substring(
+    const imagePath = `${recipeImageSrc.substring(
       recipeImageSrc.indexOf("images/")
     )}`;
     const linkPath = window.location.pathname;
