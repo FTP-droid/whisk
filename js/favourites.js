@@ -1,25 +1,147 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Get all favourite recipe cards
-  const recipeCards = document.querySelectorAll(".card");
+  /**
+   * ----------------------------------------------------------------
+   * SHARED FAVOURITES LOGIC
+   *
+   * These functions provide a consistent way to interact with
+   * favourites stored in localStorage across the entire site.
+   * ----------------------------------------------------------------
+   */
+  const getFavourites = () => {
+    return JSON.parse(localStorage.getItem("whiskFavourites")) || [];
+  };
 
-  recipeCards.forEach(card => {
-    // Create a "Remove from Favourites" button
-    const removeBtn = document.createElement("button");
-    removeBtn.textContent = "Remove from Favourites";
-    removeBtn.classList.add("btn", "remove-btn");
-    removeBtn.style.marginTop = "0.5rem";
+  const saveFavourites = (favourites) => {
+    localStorage.setItem("whiskFavourites", JSON.stringify(favourites));
+  };
 
-    // Append the button at the end of the card body
-    const cardBody = card.querySelector(".card-body");
-    cardBody.appendChild(removeBtn);
+  /**
+   * ----------------------------------------------------------------
+   * LOGIC FOR INDIVIDUAL RECIPE PAGES
+   *
+   * This block runs only if it finds a button with the ID 'favourite-btn'.
+   * It turns the button into a toggle for adding/removing a recipe.
+   * ----------------------------------------------------------------
+   */
+  const favouriteBtn = document.getElementById("favourite-btn");
+  if (favouriteBtn) {
+    const recipePage = document.querySelector(".recipe-page");
+    const recipeId = recipePage.getAttribute("aria-labelledby");
+    const recipeTitle = document.getElementById(recipeId).textContent;
+    const recipeImageSrc = document.querySelector(".recipe-image img").src;
+    const imagePath = `${recipeImageSrc.substring(
+      recipeImageSrc.indexOf("images/")
+    )}`;
+    const linkPath = window.location.pathname;
 
-    // Add click event listener to remove the card
-    removeBtn.addEventListener("click", (event) => {
-      event.preventDefault();
-      card.remove();
+    const currentRecipe = {
+      id: recipeId,
+      title: recipeTitle,
+      link: linkPath,
+      image: imagePath,
+      description: document.querySelector(".recipe-image .caption").textContent,
+    };
 
-      // Optional: show a quick message when removed
-      console.log("Removed:", card.querySelector(".card-title").textContent);
+    const updateButtonState = () => {
+      const isFavourited = getFavourites().some(
+        (fav) => fav.id === currentRecipe.id
+      );
+      if (isFavourited) {
+        favouriteBtn.textContent = "Remove from Favourites";
+      } else {
+        favouriteBtn.textContent = "Add to Favourites";
+      }
+    };
+
+    favouriteBtn.addEventListener("click", () => {
+      let favourites = getFavourites();
+      const isFavourited = favourites.some(
+        (fav) => fav.id === currentRecipe.id
+      );
+
+      if (isFavourited) {
+        favourites = favourites.filter((fav) => fav.id !== currentRecipe.id);
+        alert(`"${currentRecipe.title}" was removed from your favourites.`);
+      } else {
+        favourites.push(currentRecipe);
+        alert(`"${currentRecipe.title}" was added to your favourites.`);
+      }
+
+      saveFavourites(favourites);
+      updateButtonState();
     });
-  });
+
+    updateButtonState();
+  }
+
+  /**
+   * ----------------------------------------------------------------
+   * LOGIC FOR THE FAVOURITES PAGE
+   *
+   * This block runs only if it finds a container with the ID 'favourites-list'.
+   * It dynamically renders the list of favourited recipes from localStorage.
+   * ----------------------------------------------------------------
+   */
+  const favouritesContainer = document.getElementById("favourites-list");
+  if (favouritesContainer) {
+    const renderFavourites = () => {
+      const parent = favouritesContainer.parentElement;
+      const favourites = getFavourites();
+
+      favouritesContainer.innerHTML = "";
+      const oldMessage = parent.querySelector(".empty-message");
+      if (oldMessage) {
+        oldMessage.remove();
+      }
+
+      if (favourites.length === 0) {
+        const emptyMessage = document.createElement("p");
+        emptyMessage.className = "empty-message";
+        emptyMessage.textContent =
+          "You have no favourite recipes yet. Explore our recipes to find some!";
+        emptyMessage.style.textAlign = "center";
+        parent.insertBefore(emptyMessage, favouritesContainer);
+        return;
+      }
+
+      favourites.forEach((recipe) => {
+        const card = document.createElement("article");
+        card.className = "card";
+        card.setAttribute("data-recipe-id", recipe.id);
+
+        card.innerHTML = `
+          <a href="${recipe.link}">
+              <img src="${recipe.image}" class="card-img-top" alt="${recipe.description}">
+          </a>
+          <div class="card-body">
+              <h5 class="card-title">${recipe.title}</h5>
+              <p class="card-text">${recipe.description}</p>
+              <a href="${recipe.link}" class="btn">View Recipe</a>
+          </div>
+        `;
+
+        const removeBtn = document.createElement("a");
+        removeBtn.textContent = "Remove";
+        removeBtn.classList.add("btn", "remove-btn");
+        removeBtn.style.marginLeft = "0.5rem";
+
+        removeBtn.addEventListener("click", () => {
+          if (!confirm(`Are you sure you want to remove "${recipe.title}"?`)) {
+            return;
+          }
+          let currentFavourites = getFavourites();
+          currentFavourites = currentFavourites.filter(
+            (fav) => fav.id !== recipe.id
+          );
+          saveFavourites(currentFavourites);
+          renderFavourites();
+        });
+
+        card.querySelector(".card-body").appendChild(removeBtn);
+        favouritesContainer.appendChild(card);
+      });
+    };
+
+    renderFavourites();
+  }
 });

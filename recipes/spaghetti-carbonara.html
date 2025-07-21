@@ -24,7 +24,7 @@
   </nav>
 
   <main class="recipe-page" aria-labelledby="classic-spaghetti-carbonara">
-    <h1>Classic Spaghetti Carbonara</h1>
+    <h1 id="classic-spaghetti-carbonara">Classic Spaghetti Carbonara</h1>
     <div class="recipe-intro-group">
       <figure class="recipe-image">
         <img src="../images/carbonara.jpg" alt="Spaghetti Carbonara">
@@ -60,8 +60,8 @@
       </ol>
     </div>
 
-    <button class="btn" aria-label="Print the spaghetti carbonara recipe">Print Recipe</button>
-    <button class="btn" aria-label="Favourite the spaghetti carbonara recipe">Favourite</button>
+    <button id="print-btn" class="btn" aria-label="Print the spaghetti carbonara recipe">Print Recipe</button>
+    <button id="favourite-btn" class="btn" aria-label="Favourite the spaghetti carbonara recipe">Favourite</button>
   </main>
 
   <footer>
@@ -69,6 +69,8 @@
     <p>Photo sourced from <a href="https://www.pexels.com/">pexels.com</a> </p>
     <p>Recipes sourced from <a href="https://foodgawker.com/">foodgawker.com</a> </p>
   </footer>
+  <script src="../js/favourites.js"></script>
+  <script src="../js/print-recipe.js"></script>
 </body>
 
 </html>
