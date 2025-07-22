@@ -168,6 +168,26 @@ footer {
     padding: var(--spacing-md);
 }
 
+/* Styles for the scroll-to-top button */
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--color-accent);
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#scrollToTopBtn:hover {
+    background-color: var(--color-primary);
+    /* Darken on hover */
+}
 
 /* =================================== */
 /* CARD COMPONENTS                     */
