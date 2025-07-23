@@ -81,7 +81,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 Whisk. All rights reserved.</p>
+    <p id="copyright">&copy; <span id="year"></span> Whisk. All rights reserved.</p>
     <p>Photo sourced from <a href="https://www.pexels.com/">pexels.com</a></p>
     <p>Recipes sourced from <a href="https://foodgawker.com/">foodgawker.com</a></p>
   </footer>
@@ -89,25 +89,25 @@
   <!-- Scroll to Top Button -->
   <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
 
+  <!-- JavaScript -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const scrollBtn = document.getElementById("scrollTopBtn");
 
-      // Show/hide button on scroll
+      // Scroll-to-top visibility
       window.addEventListener("scroll", () => {
-        if (window.scrollY > 100) {
-          scrollBtn.style.display = "block";
-        } else {
-          scrollBtn.style.display = "none";
-        }
+        scrollBtn.style.display = window.scrollY > 100 ? "block" : "none";
       });
 
-      // Scroll to top on click
       scrollBtn.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
+
+      // Dynamic footer year
+      document.getElementById("year").textContent = new Date().getFullYear();
     });
   </script>
 </body>
 
 </html>
+
