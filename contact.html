@@ -2,16 +2,51 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
   <title>Whisk | Contact</title>
+  <style>
+    /* Scroll to Top Button */
+    #scrollTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 1000;
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 12px 16px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s ease;
+    }
+
+    #scrollTopBtn:hover {
+      background-color: #555;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 0.9rem;
+      margin-top: 4px;
+    }
+
+    .success-message {
+      color: green;
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 
 <body>
   <nav class="top-nav">
     <div class="nav-logo"><a href="index.html">whisk</a></div>
-    <input type="checkbox" id="menu-toggle">
+    <input type="checkbox" id="menu-toggle" />
     <label for="menu-toggle" class="hamburger">&#9776;</label>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -28,7 +63,7 @@
 
     <section class="generic-container" aria-labelledby="contact-us-page-hint">
       <h2 id="contact-us-page-hint">Questions</h2>
-        <p>
+      <p>
         If you have any questions, feedback, or recipe ideas, we'd love to hear
         from you! Here's how you can get in touch with us:
       </p>
@@ -49,25 +84,23 @@
     <section class="generic-container" aria-labelledby="social-media">
       <h2 id="social-media">Social Media</h2>
       <ul class="socials-list">
-        <li><a href="https://www.instagram.com/" target="_blank" aria-label="Visit Whisk's Instagram page">Instagram</a>
-        </li>
+        <li><a href="https://www.instagram.com/" target="_blank" aria-label="Visit Whisk's Instagram page">Instagram</a></li>
         <li><a href="https://www.twitter.com/" target="_blank" aria-label="Visit Whisk's Twitter">Twitter</a></li>
-        <li><a href="https://www.facebook.com/" target="_blank" aria-label="Visit Whisk's Facebook page">Facebook</a>
-        </li>
+        <li><a href="https://www.facebook.com/" target="_blank" aria-label="Visit Whisk's Facebook page">Facebook</a></li>
       </ul>
     </section>
 
     <section class="generic-container" aria-labelledby="send-us-a-message">
       <h2 id="send-us-a-message">Send Us a Message</h2>
-      <form action="#" method="post">
+      <form id="contactForm" action="#" method="post" novalidate>
         <div class="form-group">
           <label for="name">Name:</label>
-          <input type="text" id="name" name="name" class="form-input" required>
+          <input type="text" id="name" name="name" class="form-input" required />
         </div>
 
         <div class="form-group">
           <label for="email">Email:</label>
-          <input type="email" id="email" name="email" class="form-input" required>
+          <input type="email" id="email" name="email" class="form-input" required />
         </div>
 
         <div class="form-group">
@@ -76,15 +109,89 @@
         </div>
 
         <button type="submit" class="btn" aria-label="Send your message to the creators of Whisk">Send message</button>
+        <div id="formFeedback"></div>
       </form>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Whisk. All rights reserved.</p>
+    <p id="copyright">&copy; <span id="year"></span> Whisk. All rights reserved.</p>
     <p>Photo sourced from <a href="https://www.pexels.com/">pexels.com</a></p>
     <p>Recipes sourced from <a href="https://foodgawker.com/">foodgawker.com</a></p>
   </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const scrollBtn = document.getElementById("scrollTopBtn");
+      const form = document.getElementById("contactForm");
+      const feedback = document.getElementById("formFeedback");
+
+      // Scroll button functionality
+      window.addEventListener("scroll", () => {
+        scrollBtn.style.display = window.scrollY > 100 ? "block" : "none";
+      });
+
+      scrollBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      // Dynamic Year in Footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Contact form validation
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        feedback.innerHTML = ""; // clear previous messages
+
+        // Remove any existing error messages
+        [...form.querySelectorAll(".error-message")].forEach(el => el.remove());
+
+        let isValid = true;
+
+        const name = form.name;
+        const email = form.email;
+        const message = form.message;
+
+        if (!name.value.trim()) {
+          showError(name, "Name is required.");
+          isValid = false;
+        }
+
+        if (!email.value.trim()) {
+          showError(email, "Email is required.");
+          isValid = false;
+        } else if (!/^\S+@\S+\.\S+$/.test(email.value)) {
+          showError(email, "Email address is not valid.");
+          isValid = false;
+        }
+
+        if (!message.value.trim()) {
+          showError(message, "Message cannot be empty.");
+          isValid = false;
+        }
+
+        if (isValid) {
+          feedback.innerHTML = `<p class="success-message">Message sent! We'll get back to you soon.</p>`;
+          form.reset();
+        }
+      });
+
+      function showError(input, message) {
+        const error = document.createElement("p");
+        error.className = "error-message";
+        error.textContent = message;
+        input.insertAdjacentElement("afterend", error);
+      }
+    });
+  </script>
+</body>
+
+</html>
+
 </body>
 
 </html>
