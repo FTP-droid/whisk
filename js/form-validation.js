@@ -136,6 +136,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (validateForm(form)) {
         handleSuccess(form);
+
+        // Temporarily disable the submit button to prevent multiple submissions
+        const submitButton = form.querySelector('[type="submit"]');
+        if (submitButton) {
+          submitButton.disabled = true;
+
+          // Re-enable the button after a few seconds, allowing the user
+          // to see the success message before they can submit again.
+          setTimeout(() => {
+            submitButton.disabled = false;
+          }, 4000); // 4-second delay
+        }
       }
     });
   });

@@ -97,8 +97,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (favourites.length === 0) {
         const emptyMessage = document.createElement("p");
         emptyMessage.className = "empty-message";
-        emptyMessage.textContent =
-          "You have no favourite recipes yet. Explore our recipes to find some!";
+        emptyMessage.innerHTML =
+          'You have no favourite recipes yet. <a href="recipes-gallery.html">Explore our recipes</a> to find some!';
         emptyMessage.style.textAlign = "center";
         parent.insertBefore(emptyMessage, favouritesContainer);
         return;
