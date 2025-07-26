@@ -1,12 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  /**
-   * ----------------------------------------------------------------
-   * SHARED FAVOURITES LOGIC
-   *
-   * These functions provide a consistent way to interact with
-   * favourites stored in localStorage across the entire site.
-   * ----------------------------------------------------------------
-   */
   const getFavourites = () => {
     return JSON.parse(localStorage.getItem("whiskFavourites")) || [];
   };
@@ -15,14 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("whiskFavourites", JSON.stringify(favourites));
   };
 
-  /**
-   * ----------------------------------------------------------------
-   * LOGIC FOR INDIVIDUAL RECIPE PAGES
-   *
-   * This block runs only if it finds a button with the ID 'favourite-btn'.
-   * It turns the button into a toggle for adding/removing a recipe.
-   * ----------------------------------------------------------------
-   */
   const favouriteBtn = document.getElementById("favourite-btn");
   if (favouriteBtn) {
     const recipePage = document.querySelector(".recipe-page");
@@ -74,14 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
     updateButtonState();
   }
 
-  /**
-   * ----------------------------------------------------------------
-   * LOGIC FOR THE FAVOURITES PAGE
-   *
-   * This block runs only if it finds a container with the ID 'favourites-list'.
-   * It dynamically renders the list of favourited recipes from localStorage.
-   * ----------------------------------------------------------------
-   */
   const favouritesContainer = document.getElementById("favourites-list");
   if (favouritesContainer) {
     const renderFavourites = () => {
@@ -114,9 +90,13 @@ document.addEventListener("DOMContentLoaded", () => {
               <img src="${recipe.image}" class="card-img-top" alt="${recipe.description}">
           </a>
           <div class="card-body">
-              <h5 class="card-title">${recipe.title}</h5>
-              <p class="card-text">${recipe.description}</p>
-              <a href="${recipe.link}" class="btn">View Recipe</a>
+            <h3 class="card-title">
+                <a href="${recipe.link}" class="recipe-link">
+                ${recipe.title}
+                </a>
+            </h3>
+            <p>${recipe.description}</p>
+            <a href="${recipe.link}" class="btn">View Recipe</a>
           </div>
         `;
 

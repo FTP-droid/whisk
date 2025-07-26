@@ -1,8 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Find all forms on the page that have the 'novalidate' attribute
   const forms = document.querySelectorAll("form[novalidate]");
-
-  // --- Helper Functions ---
 
   /**
    * Clears all previous error messages from a form.
@@ -27,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
     error.className = "error-message";
     error.textContent = message;
 
-    // For radio buttons, place the error after the fieldset legend
     if (field.type === "radio") {
       const fieldset = field.closest("fieldset");
       if (fieldset) {
@@ -36,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
           .insertAdjacentElement("afterend", error);
       }
     } else {
-      // For other fields, place it inside the parent .form-group
       const formGroup = field.closest(".form-group");
       if (formGroup) {
         formGroup.appendChild(error);
@@ -54,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let successMessage = "✅ Thank you! Your submission was successful.";
 
-    // Customize message based on form ID
     if (form.id === "recipeForm") {
       const firstName = form.querySelector("#first-name")?.value || "there";
       const recipeName =
@@ -67,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     feedbackEl.innerHTML = successMessage;
     feedbackEl.classList.add("success-message");
-    feedbackEl.classList.remove("error-message"); // Just in case
+    feedbackEl.classList.remove("error-message");
     form.reset();
   };
 
@@ -82,18 +76,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     clearErrors(form);
 
-    // Get all fields that can be validated.
     const fields = form.querySelectorAll("input, select, textarea");
 
-    // A set to keep track of radio groups we've already validated to avoid duplicate errors
     const validatedRadioGroups = new Set();
 
     fields.forEach((field) => {
-      // Special handling for required radio button groups
       if (field.type === "radio" && field.required) {
         const groupName = field.name;
         if (validatedRadioGroups.has(groupName)) {
-          return; // Skip if we've already processed this group
+          return;
         }
         validatedRadioGroups.add(groupName);
 
@@ -102,17 +93,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (!isChecked) {
           isValid = false;
-          // Show error on the first radio button of the group
           showError(field, "Please select an option.");
           if (!firstInvalidField) firstInvalidField = field;
         }
       } else {
-        // For all other fields, the browser's API does all the work!
-        // It checks for required, type="email", pattern, min, max, etc.
         if (!field.checkValidity()) {
           isValid = false;
-          // The validationMessage will automatically use the `title` attribute
-          // for a pattern mismatch, which is exactly what we want.
           showError(field, field.validationMessage);
           if (!firstInvalidField) firstInvalidField = field;
         }
@@ -127,26 +113,20 @@ document.addEventListener("DOMContentLoaded", () => {
     return isValid;
   };
 
-  // --- Event Listener ---
-
-  // Attach the validation logic to the submit event of each form
   forms.forEach((form) => {
     form.addEventListener("submit", (event) => {
-      event.preventDefault(); // Stop the default submission
+      event.preventDefault();
 
       if (validateForm(form)) {
         handleSuccess(form);
 
-        // Temporarily disable the submit button to prevent multiple submissions
         const submitButton = form.querySelector('[type="submit"]');
         if (submitButton) {
           submitButton.disabled = true;
 
-          // Re-enable the button after a few seconds, allowing the user
-          // to see the success message before they can submit again.
           setTimeout(() => {
             submitButton.disabled = false;
-          }, 4000); // 4-second delay
+          }, 4000);
         }
       }
     });
