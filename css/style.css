@@ -615,3 +615,82 @@ form {
     font-size: 0.9rem;
     margin-top: 0.25rem;
 }
+
+/* =================================== */
+/* PRINT STYLES                        */
+/* =================================== */
+@media print {
+
+    .top-nav,
+    footer,
+    #scrollToTopBtn,
+    #print-btn,
+    #favourite-btn,
+    .hamburger,
+    #menu-toggle {
+        display: none !important;
+    }
+
+    body {
+        font-size: 12pt;
+        background-color: #fff;
+        color: #000;
+        margin: 0;
+        padding: 0;
+        line-height: 1.4;
+    }
+
+    .card,
+    .card-overlay,
+    .recipe-image img,
+    .recipe-page {
+        box-shadow: none;
+    }
+
+    main,
+    .recipe-page {
+        max-width: 100% !important;
+        margin: 0;
+        padding: 1cm;
+    }
+
+    .recipe-intro-group {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .recipe-image {
+        display: none;
+    }
+
+    .ingredients-card {
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+    }
+
+    .recipe-instruction {
+        margin: 0;
+        padding: 0;
+        gap: 0;
+    }
+
+    .recipe-instruction li {
+        page-break-inside: avoid;
+        padding-bottom: 0.5rem;
+    }
+
+    h1,
+    h2 {
+        page-break-after: avoid;
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
+        text-align: left;
+    }
+
+    a {
+        color: inherit !important;
+        text-decoration: none !important;
+    }
+}
